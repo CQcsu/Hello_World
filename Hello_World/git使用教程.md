@@ -135,6 +135,15 @@ Release分支（偏向测试）：发布一个新Release的时候，我们基于
 Hotfix分支（紧急bug发布）：在Production发现新的Bug时候，我们需要创建一个Hotfix, 完成Hotfix后，我们合并回Master和Develop分支，所以Hotfix的改动会进入下一个Release
 ~~~
 
+~~~
+git checkout :主要功能就是迁出一个分支的特定版本。
+$ git checkout master     #//取出master版本的head。
+$ git checkout tag_name    #//在当前分支上 取出 tag_name 的版本
+$ git checkout .
+#这条命令把 当前目录所有修改的文件 从HEAD中签出并且把它恢复成未修改时的样子.
+#注意：在使用 git checkout 时，如果其对应的文件被修改过，那么该修改会被覆盖掉
+~~~
+
 **git参考教程**
 
 https://www.liaoxuefeng.com/wiki/896043488029600
